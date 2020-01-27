@@ -9,6 +9,7 @@
   "dependencies": {
     "as-type": "^1.0.0",
     "casting": "^0.0.2",
+    "dataframe-js": "^1.4.3",
     "dotenv": "^8.2.0",
     "egg": "^2.15.1",
     "egg-scripts": "^2.11.0",

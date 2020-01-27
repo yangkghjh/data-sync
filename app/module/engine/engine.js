@@ -2,15 +2,17 @@
 
 const shimo = require("../shimo/shimo");
 const fs = require("fs");
+const encoder = require("../format/encoder");
 
 const RulePath = __dirname+'/../../../rules/';
 
-async function Run() {
+async function Run(format) {
     var files = fs.readdirSync(RulePath);
     let results = [];
     for (let i = 0; i < files.length; i++) {
         let rule = require(RulePath+files[i]);
-        results = await RunSingle(rule);
+        let result = await RunSingle(rule);
+        results[rule.id] = encoder(format).Encode(rule, result);
     }
 
     return new Promise(function(resolve) {

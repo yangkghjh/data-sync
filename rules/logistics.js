@@ -1,6 +1,7 @@
 "use strict";
 
 module.exports = {
+    id: 'logistics',
     name: '物流',
     guid: 'sheetId',
     skipHead: 1,
