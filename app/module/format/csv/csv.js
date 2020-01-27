@@ -8,7 +8,7 @@ function Encode(rule, rows) {
         columns.push(column.name);
     });
     let df = new dataframe(rows, columns);
-    
+
     return df.toCSV();
 }
 
